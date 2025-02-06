@@ -14,26 +14,35 @@ A **single-campaign** Mars colonization strategy game about **resource managemen
 - You play as the colony’s **Commander**, leading a small group of settlers. Survival depends on managing harsh environmental conditions, limited resources, and uncovering (or surviving) alien secrets lurking beneath the Martian surface.
 - **Goal**: Establish a self-sustaining colony. Progress through a **massive technology tree**, from basic life support and habitats to advanced terraforming. Along the way, you encounter anomalies and clues pointing to a hidden alien mystery.
 
-> [!attention] 
-> Danni Finish the story 
+> [!attention]
+> Danni Finish the story
+
+---
+
+## **Game Engine**
+
+- We are using Unity built in 2d URP for our project
+- For 3d assets we are using Ai 3d model generators for all assets.
+- Make 3d Assets Rigs in Blender and dropped in as 3d models.
+- Assets will be pixelated using Shaders.
 
 ---
 
 ## **Gameplay Loop**
 
 1. **Core Mechanics (Always in a Side-Scrolling 2D or Minimalist 2.5D View (Optional))**
-    
+
     - **Resource Gathering**: Mine metals, drill for water-ice deposits, harness solar energy.
     - **Base Building**: Construct hab modules, oxygen generators, research labs, and defense systems.
     - **Technology Progression**: A large, **branching tech tree** unlocks better structures, terraforming methods, and the ability to investigate alien artifacts.
     - **Hazard Management**: Mars dust storms, meteor showers, temperature drops, and potential alien dangers.
     - **Turn based:** making each turn cycle be a year so that its easier on us as well as the colonists time to build structures or increase population
 2. **Expansion and Exploration**
-    
+
     - **Colony Expansion**: Add modules, upgrade existing buildings for improved production and sustainability.
     - **Alien Mystery**: Discover and research strange artifacts, cryptic signals, or hidden ruins that alter your understanding of Mars.
 3. **Failure & Replay Possibilities**
-    
+
     - If crucial systems fail (e.g., oxygen or power) or catastrophic storms destroy key infrastructure, your colony can collapse.
     - The design supports a **restart / ascension mechanic** (if desired) or a straightforward single-run approach based on final balancing. (This can be scaled according to time constraints.) **</ascension mechanic will be a feature since it will require abit of extra work and is technically not needed in the base game to get it to work from the get go/>**
 
