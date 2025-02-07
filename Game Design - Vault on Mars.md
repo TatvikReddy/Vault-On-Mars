@@ -15,13 +15,15 @@ A **single-campaign** Mars colonization strategy game about **resource managemen
 - **Goal**: Establish a self-sustaining colony. Progress through a **massive technology tree**, from basic life support and habitats to advanced terraforming. Along the way, you encounter anomalies and clues pointing to a hidden alien mystery.
 
 
- Humans have finally found their way into the space age and is trying to find hospitable/terraform able planets, you are sent to the confines of space in order to find that. As you are cruising through space your radar detects rare materials on Mars. You **insert name** must set up a colony and make sure your settlement thrives as you dig for this anomaly.
- - Starting:
- 	- getting used to the different materials, buildings, upgrade tree
- - Mid game:
- 	- gives the user free reign to do what they want and how to build up
- - Late game:
- 	- Complete the main objective within a short time frame.
+> Humans have finally found their way into the space age and is trying to find hospitable/terraform able planets, you are sent to the confines of space in order to find that. As you are cruising through space your radar detects rare materials on Mars. You **insert name** must set up a colony and make sure your settlement thrives as you dig for this anomaly.
+> - Starting:
+> 	- getting used to the different materials, buildings, upgrade tree
+> - Mid game:
+> 	- gives the user free reign to do what they want and how to build up
+    - events start to popup that can positively or negatively impact your city i.e ion storm will negatively impact your powerplants/energy, found new cave to mine will increase material production, surge in birth rates to increase population etc.
+> - Late game:
+> 	- Complete the main objective within a short time frame.
+    - events become more frequent and the penalties become more harsher as time progresses
 
 ---
 
