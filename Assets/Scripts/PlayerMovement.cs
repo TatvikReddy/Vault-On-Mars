@@ -1,13 +1,26 @@
+using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Rigidbody2D rb;
+    
     public float speed = 5.0f;
-    public Rigidbody2D body;
+    
+    private Vector2 _newVelocity;
+    
 
-    // Update is called once per frame
-    void Update() {
-        float horizontal = Input.GetAxis("Horizontal");
-        body.linearVelocity = new Vector2(horizontal, 0.0f) * speed;
+    private void FixedUpdate()
+    {
+        ApplyMovement();
     }
+
+    private void ApplyMovement()
+    {
+        float xInput = Input.GetAxis("Horizontal");
+        _newVelocity.Set(xInput * speed, rb.linearVelocity.y);
+        rb.linearVelocity = _newVelocity;
+    }
+    
 }
