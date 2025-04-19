@@ -5,5 +5,6 @@ public class BuildingBlueprint
 {
    public GameObject prefab;
    public Vector3 positionOffset;
-   public int cost;
+   public int metalCost;
+   public int energyCost;
 }

@@ -10,6 +10,11 @@ public class CameraController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        SmoothMove();
+    }
+
+    private void SmoothMove()
+    {
         Vector3 targetPosition = target.position + _offset;
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref _velocity, _smoothTime);
     }
