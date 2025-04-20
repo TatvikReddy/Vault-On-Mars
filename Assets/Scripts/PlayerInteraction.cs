@@ -9,7 +9,10 @@ public class PlayerInteraction : MonoBehaviour
         // When player presses interaction button get the item and use its Interact() function
         if (Input.GetKeyDown(KeyCode.E))
         {
-            print("Interacting with Something");
+            if (GameManager.instance.canInteract)
+            {
+                GameManager.instance.currentInteractable.Interact();
+            }
         }
     }
 }

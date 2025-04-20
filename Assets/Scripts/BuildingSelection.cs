@@ -20,7 +20,7 @@ public class BuildingSelection : MonoBehaviour
     // Boolean to check if a building has been placed
     private bool hasBuilding = false;
 
-    public void Awake()
+    public void Start()
     {
         // Get the sprite renderer of the plot for later use
         spriteRenderer = GetComponent<SpriteRenderer>();
