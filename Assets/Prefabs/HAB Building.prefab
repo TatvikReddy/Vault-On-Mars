@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1951112802420071097}
   - component: {fileID: 6715823696126154650}
+  - component: {fileID: 2343006334979939237}
   m_Layer: 0
   m_Name: HAB Building
   m_TagString: Untagged
@@ -87,3 +88,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2343006334979939237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706478544120345020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1182a5a8e60a4bc78b40d89360df851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingName: HAB
+  blueprint:
+    prefab: {fileID: 7706478544120345020}
+    positionOffset: {x: 0, y: 1, z: 0}
+    metalCost: 100
+    energyCost: 50
