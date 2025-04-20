@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 
     public Interactable currentInteractable;
 
+    public PlayerInventory playerInventory;
+
     public bool canInteract = false;
     private void Awake()
     {

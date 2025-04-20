@@ -21,6 +21,7 @@ public class Resource : Interactable
         if (currentResource > 0)
         {
             currentResource -= resourceGainPerHit;
+            GameManager.instance.playerInventory.updateResource(resourceType, resourceGainPerHit);
         }
         else
         {

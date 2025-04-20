@@ -53,6 +53,11 @@ public class BuildingSelection : MonoBehaviour
 
     public void SelectBuilding(int buildingNum)
     {
+        if (!CanAfford(buildingNum))
+        {
+            return;
+        }
+        
         // Instantiate the building and set current building
         GameObject building = (GameObject)Instantiate(buildings[buildingNum].blueprint.prefab, this.transform.position + buildings[buildingNum].blueprint.positionOffset, Quaternion.identity);
         currentBuilding = building;
@@ -61,6 +66,23 @@ public class BuildingSelection : MonoBehaviour
         spriteRenderer.enabled = false;
         hasBuilding = true;
         buildMenu.SetActive(false);
+    }
+
+    private bool CanAfford(int buildingNum)
+    {
+        BuildingBlueprint blueprint = buildings[buildingNum].blueprint;
+        PlayerInventory inventory = GameManager.instance.playerInventory;
+
+        if (inventory.getResource(ResourceType.Metal) < blueprint.metalCost ||
+            inventory.getResource(ResourceType.Energy) < blueprint.energyCost)
+        {
+            return false;
+        }
+        
+        inventory.updateResource(ResourceType.Metal, blueprint.metalCost * -1);
+        inventory.updateResource(ResourceType.Energy, blueprint.energyCost * -1);
+
+        return true;
     }
     
     private void OnTriggerEnter2D(Collider2D other)

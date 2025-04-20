@@ -12,7 +12,7 @@ public class Building : Interactable
     public override void Interact()
     {
         // Add functionality of displaying building details when interacted with
-        Debug.Log("Interacted with Building");
+        Debug.Log("Interacted with " + buildingName);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
