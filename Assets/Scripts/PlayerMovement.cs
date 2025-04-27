@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     // Variable to hold and save velocity between updates
     private Vector2 _newVelocity;
     
-
     private void FixedUpdate()
     {
         ApplyMovement();
@@ -19,6 +18,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void ApplyMovement()
     {
+        if (!GameManager.instance.canMove)
+        {
+            return;
+        }
+        
         // Get horizontal input (AKA "A", "D", Left Arrow, and Right Arrow)
         float xInput = Input.GetAxis("Horizontal");
         _newVelocity.Set(xInput * speed, rb.linearVelocity.y);
