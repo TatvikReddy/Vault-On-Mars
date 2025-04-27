@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VAULTONMARS_0: 6005322594726373456
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

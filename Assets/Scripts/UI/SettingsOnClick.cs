@@ -15,6 +15,7 @@ public class SettingsOnClick : MonoBehaviour
     public void SettingsClick()
     {
         panel.SetActive(true);
+        exit.gameObject.SetActive(true);
     }
 
     public void ExitClick()
