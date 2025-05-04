@@ -37,6 +37,7 @@ public class JobManager : MonoBehaviour
                 job.AddWorker(worker.gameObject);
                 worker.AssignJob(job.gameObject);
                 jobsOpen--;
+                return;
             }
         }
     }
