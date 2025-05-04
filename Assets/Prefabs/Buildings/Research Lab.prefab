@@ -750,7 +750,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 794638378973858297}
+      - m_Target: {fileID: 1264440085955796895}
         m_TargetAssemblyTypeName: Building, Assembly-CSharp
         m_MethodName: disableMenu
         m_Mode: 1
@@ -772,8 +772,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8826317146266260506}
   - component: {fileID: 8786731716554427156}
-  - component: {fileID: 794638378973858297}
   - component: {fileID: 7143218204640508208}
+  - component: {fileID: 1264440085955796895}
   m_Layer: 0
   m_Name: Research Lab
   m_TagString: Untagged
@@ -853,26 +853,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &794638378973858297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3900602327534100388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1182a5a8e60a4bc78b40d89360df851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildingName: Research Lab
-  blueprint:
-    prefab: {fileID: 3900602327534100388}
-    positionOffset: {x: 0, y: 1, z: 0}
-    metalCost: 150
-    energyCost: 100
-  menuCanvas: {fileID: 4771355976124254599}
-  onDisplayCanMove: 0
 --- !u!61 &7143218204640508208
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -919,6 +899,29 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1264440085955796895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3900602327534100388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7dab8b0f4b646129509495b4c51b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingName: Research Lab
+  blueprint:
+    prefab: {fileID: 3900602327534100388}
+    positionOffset: {x: 0, y: 1, z: 0}
+    metalCost: 150
+    energyCost: 100
+  menuCanvas: {fileID: 4771355976124254599}
+  onDisplayCanMove: 0
+  totalJobOpenings: 2
+  currentJobOpening: 0
+  NpcList: []
 --- !u!1 &4659453101289911100
 GameObject:
   m_ObjectHideFlags: 0

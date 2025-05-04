@@ -13,6 +13,7 @@ public class Building : Interactable
     public bool onDisplayCanMove = true;
     
     // Add NPC array here later
+
     public override void Interact()
     {
         // Add functionality of displaying building details when interacted with
