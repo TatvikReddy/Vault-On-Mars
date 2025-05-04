@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1291906979556494222}
   - component: {fileID: 8675397234490532484}
-  - component: {fileID: 3102711190810986105}
   - component: {fileID: 7860448779649726470}
+  - component: {fileID: 1900207741275244449}
   m_Layer: 0
   m_Name: Solar Panel
   m_TagString: Untagged
@@ -89,24 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3102711190810986105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 962715640990657072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1182a5a8e60a4bc78b40d89360df851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildingName: Solar Panel
-  blueprint:
-    prefab: {fileID: 962715640990657072}
-    positionOffset: {x: 0, y: 1, z: 0}
-    metalCost: 50
-    energyCost: 20
 --- !u!61 &7860448779649726470
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -153,3 +135,26 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1900207741275244449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962715640990657072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7dab8b0f4b646129509495b4c51b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingName: Solar Panel
+  blueprint:
+    prefab: {fileID: 962715640990657072}
+    positionOffset: {x: 0, y: 1, z: 0}
+    metalCost: 50
+    energyCost: 20
+  menuCanvas: {fileID: 0}
+  onDisplayCanMove: 1
+  totalJobOpenings: 1
+  currentJobOpening: 0
+  NpcList: []
