@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
     // Distance of camera from target
     public Vector3 offset = new Vector3(0.0f, 0.0f, -20.0f);
     // Time to slow and focus on target
-    private float _smoothTime = 0.5f;
+    private float _smoothTime = 0.2f;
     // Speed of the camera
     private Vector3 _velocity = Vector3.zero;
 
