@@ -1,37 +1,42 @@
-using System;
 using UnityEngine;
 
 public class BackgroundController : MonoBehaviour
 {
-    private float startPos;
-    private float length;
     public GameObject cam;
-    public float parallaxEffect;
+    public GameObject[] backgrounds;
+    private float length;
 
     private void Start()
     {
-        startPos = transform.position.x;
-        length = GetComponent<SpriteRenderer>().bounds.size.x;
+        if (backgrounds.Length < 2)
+        {
+            Debug.Log("BackgroundController needs 2 backgrounds");
+            return;
+        }
+
+        length = backgrounds[0].GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
     private void FixedUpdate()
     {
-        float distance = cam.transform.position.x * parallaxEffect;
-        float movement = cam.transform.position.x * (1 - parallaxEffect);
+        
+        transform.position = new Vector3(transform.position.x, cam.transform.position.y + 15, transform.position.z);
 
-        transform.position = new Vector3(startPos + distance, cam.transform.position.y + 15, transform.position.z);
-
-        if (movement > startPos + length)
+        for (int i = 0; i < backgrounds.Length; i++)
         {
-            startPos += length;
-            transform.rotation = new Quaternion(transform.rotation.x, transform.rotation.y * -1, transform.rotation.z, transform.rotation.w);
+            float camX = cam.transform.position.x;
+            float bgX = backgrounds[i].transform.position.x;
 
-        }
-        else if (movement < startPos - length)
-        {
-            startPos -= length;
-            transform.rotation = new Quaternion(transform.rotation.x, transform.rotation.y * -1, transform.rotation.z, transform.rotation.w);
-
+            if (camX - bgX > length)
+            {
+                float newX = backgrounds[(i + 1) % backgrounds.Length].transform.position.x + length;
+                backgrounds[i].transform.position = new Vector3(newX, backgrounds[i].transform.position.y, backgrounds[i].transform.position.z);
+            }
+            else if (bgX - camX > length)
+            {
+                float newX = backgrounds[(i + 1) % backgrounds.Length].transform.position.x - length;
+                backgrounds[i].transform.position = new Vector3(newX, backgrounds[i].transform.position.y, backgrounds[i].transform.position.z);
+            }
         }
     }
 }
