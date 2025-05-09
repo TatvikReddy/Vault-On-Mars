@@ -44,10 +44,16 @@ public class GameManager : MonoBehaviour
     public void StartTurn()
     {
         
+        playerInventory.updateResource(ResourceType.Money,  -1 *getUpkeepCost());
+
+        if (playerInventory.getResource(ResourceType.Money) < 0)
+        {
+            turnEndCanvas.GetComponent<TurnTransition>().GameLost();
+            return;
+        }
+        
         currentTurn++;
         turnText.text = currentTurn.ToString();
-        
-        playerInventory.updateResource(ResourceType.Money,  -1 *getUpkeepCost());
 
         //reset all buildings
         foreach (var building in buildings)

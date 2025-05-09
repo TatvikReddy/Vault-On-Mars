@@ -9,11 +9,20 @@ public class TurnTransition : MonoBehaviour
     public TMP_Text[] fadeTexts;
     public TMP_Text upkeepText;
     public TMP_Text moneyText;
+    public Button returnButton;
     public float fadeTime = 1.0f;
 
     public void StartTransition()
     {
         StartCoroutine(HandleTurnTransition());
+    }
+
+    public void GameLost()
+    {
+        fadeTexts[0].text = "Game\nOver!";
+        fadeTexts[1].text = "";
+        moneyText.text = GameManager.instance.playerInventory.getResource(ResourceType.Money).ToString();
+        returnButton.enabled = true;
     }
 
     private IEnumerator HandleTurnTransition()
@@ -27,7 +36,7 @@ public class TurnTransition : MonoBehaviour
 
         upkeepText.text = GameManager.instance.getUpkeepCost().ToString();
 
-        moneyText.text = GameManager.instance.playerInventory.getResource(ResourceType.Money).ToString() + "-" + upkeepText.text;
+        moneyText.text = GameManager.instance.playerInventory.getResource(ResourceType.Money) + "-" + upkeepText.text;
 
         GameManager.instance.resetPlayer();
         
