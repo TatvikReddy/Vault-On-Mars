@@ -9,6 +9,7 @@ public class CanvasToggle : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P) && canvasObject != null)
         {
             canvasObject.SetActive(!canvasObject.activeSelf);
+            GameManager.instance.canMove = false;
         }
     }
 
@@ -21,7 +22,7 @@ public class CanvasToggle : MonoBehaviour
         {
             canvasObject.SetActive(false);
         }
-
+        GameManager.instance.canMove = true;
 
     }
 }
