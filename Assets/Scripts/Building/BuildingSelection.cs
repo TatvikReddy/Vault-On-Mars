@@ -74,13 +74,13 @@ public class BuildingSelection : MonoBehaviour
         PlayerInventory inventory = GameManager.instance.playerInventory;
 
         if (inventory.getResource(ResourceType.Metal) < blueprint.metalCost ||
-            inventory.getResource(ResourceType.Energy) < blueprint.energyCost)
+            inventory.getResource(ResourceType.Money) < blueprint.moneyCost)
         {
             return false;
         }
         
         inventory.updateResource(ResourceType.Metal, blueprint.metalCost * -1);
-        inventory.updateResource(ResourceType.Energy, blueprint.energyCost * -1);
+        inventory.updateResource(ResourceType.Money, blueprint.moneyCost * -1);
 
         return true;
     }
@@ -91,6 +91,7 @@ public class BuildingSelection : MonoBehaviour
         if (other.CompareTag("Player") && !hasBuilding)
         {
             buildMenu.SetActive(true);
+            GameManager.instance.mainCamera.GetComponent<CameraController>().SwitchOffset();
         }
     }
 
@@ -100,6 +101,7 @@ public class BuildingSelection : MonoBehaviour
         if (other.CompareTag("Player") && !hasBuilding)
         {
             buildMenu.SetActive(false);
+            GameManager.instance.mainCamera.GetComponent<CameraController>().SwitchOffset();
         }
     }
 }

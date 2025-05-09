@@ -2,6 +2,5 @@
 public enum ResourceType
 {
     Metal,
-    Water,
-    Energy
+    Money,
 }

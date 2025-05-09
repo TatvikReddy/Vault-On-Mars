@@ -53,6 +53,9 @@ TagManager:
   - name: 3Midground
     uniqueID: 662104693
     locked: 0
+  - name: Buildings
+    uniqueID: 3851574333
+    locked: 0
   - name: Player
     uniqueID: 3634968261
     locked: 0

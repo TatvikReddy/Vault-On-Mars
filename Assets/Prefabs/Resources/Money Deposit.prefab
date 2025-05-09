@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 695799732744337122}
   - component: {fileID: 1804924676901533966}
   m_Layer: 0
-  m_Name: Energy Deposit
+  m_Name: Money Deposit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -443392963
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042ff7e8a59b845dd92e33e9ea13e24a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceType: 2
+  resourceType: 1
   resourceGainPerHit: 15
   totalResource: 150
+  currentResource: 0

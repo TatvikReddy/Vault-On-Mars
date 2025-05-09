@@ -11,8 +11,11 @@ public class Building : Interactable
     public GameObject menuCanvas;
 
     public bool onDisplayCanMove = true;
-    
-    // Add NPC array here later
+
+    private void Awake()
+    {
+        GameManager.instance.buildings.Add(this);
+    }
 
     public override void Interact()
     {
@@ -31,6 +34,8 @@ public class Building : Interactable
         {
             GameManager.instance.currentInteractable = this;
             GameManager.instance.canInteract = true;
+            GameManager.instance.mainCamera.GetComponent<CameraController>().SwitchOffset();
+
         }
     }
 
@@ -40,6 +45,7 @@ public class Building : Interactable
         {
             GameManager.instance.currentInteractable = null;
             GameManager.instance.canInteract = false;
+            GameManager.instance.mainCamera.GetComponent<CameraController>().SwitchOffset();
         }
     }
 
@@ -53,5 +59,11 @@ public class Building : Interactable
     {
         GameManager.instance.canMove = true;
         menuCanvas.SetActive(false);
+    }
+
+    public virtual void resetBuilding()
+    {
+        //For work buildings this does not mean anything
+        //For HAB buildings this means bringing their workers back to home for a little bit
     }
 }

@@ -280,8 +280,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -443392963
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -309,7 +309,6 @@ MonoBehaviour:
   buildMenu: {fileID: 206330960489380023}
   buttonParent: {fileID: 884251781684285741}
   buttonPrefab: {fileID: 7243670580280735206, guid: 9ad0676748b2d46e195e033fb1a3babd, type: 3}
-  spriteRenderer: {fileID: 2584117256589718851}
   currentBuilding: {fileID: 0}
   buildings:
   - {fileID: 0}

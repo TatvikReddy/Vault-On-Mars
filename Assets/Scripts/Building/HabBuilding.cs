@@ -25,4 +25,25 @@ public class HabBuilding : Building
             yield return new WaitForSeconds(spawnTimer);
         }
     }
+
+    private IEnumerator NPCReset()
+    {
+        foreach (var resident in habResidents)
+        {
+            yield return new WaitForSeconds(Random.Range(1.5f, 6.0f));
+            resident.GetComponent<NPCBehavior>().currentState = NpcState.GoingToWork;
+        }
+    }
+
+    public override void resetBuilding()
+    {
+        foreach (var resident in habResidents)
+        {
+            resident.GetComponent<NPCBehavior>().currentState = NpcState.IdleAtHome;
+            resident.transform.position = transform.position;
+        }
+        
+        StartCoroutine(NPCReset());
+        //Get NPCs back home and have them wait random time before going to work
+    }
 }

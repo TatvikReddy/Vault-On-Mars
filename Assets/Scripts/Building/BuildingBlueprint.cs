@@ -9,5 +9,6 @@ public class BuildingBlueprint
    public Vector3 positionOffset;
    // Costs to build
    public int metalCost;
-   public int energyCost;
+   public int moneyCost;
+   public int moneyUpkeepCost;
 }

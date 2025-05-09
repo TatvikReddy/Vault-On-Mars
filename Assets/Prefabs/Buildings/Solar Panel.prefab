@@ -75,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -443392963
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -152,7 +152,8 @@ MonoBehaviour:
     prefab: {fileID: 962715640990657072}
     positionOffset: {x: 0, y: 1, z: 0}
     metalCost: 50
-    energyCost: 20
+    moneyCost: 30
+    moneyUpkeepCost: 10
   menuCanvas: {fileID: 0}
   onDisplayCanMove: 1
   totalJobOpenings: 1
