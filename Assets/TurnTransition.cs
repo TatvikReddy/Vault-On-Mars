@@ -19,10 +19,14 @@ public class TurnTransition : MonoBehaviour
 
     public void GameLost()
     {
+        StartCoroutine(Fade(0.0f, 1.0f));
+        StartCoroutine(FadeTexts(0.0f, 1.0f));
+        GameManager.instance.canMove = false;
         fadeTexts[0].text = "Game\nOver!";
         fadeTexts[1].text = "";
         moneyText.text = GameManager.instance.playerInventory.getResource(ResourceType.Money).ToString();
-        returnButton.enabled = true;
+        moneyText.gameObject.SetActive(true);
+        returnButton.gameObject.SetActive(true);
     }
 
     private IEnumerator HandleTurnTransition()
@@ -38,6 +42,9 @@ public class TurnTransition : MonoBehaviour
 
         moneyText.text = GameManager.instance.playerInventory.getResource(ResourceType.Money) + "-" + upkeepText.text;
 
+        moneyText.gameObject.SetActive(true);
+        upkeepText.gameObject.SetActive(true);
+        
         GameManager.instance.resetPlayer();
         
         yield return new WaitForSeconds(4.0f);

@@ -2582,7 +2582,7 @@ MonoBehaviour:
   - {fileID: 1230475266}
   upkeepText: {fileID: 2062284405}
   moneyText: {fileID: 1988382118}
-  returnButton: {fileID: 0}
+  returnButton: {fileID: 864974418}
   fadeTime: 1
 --- !u!114 &969433510
 MonoBehaviour:
